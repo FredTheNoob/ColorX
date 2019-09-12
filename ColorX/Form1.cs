@@ -71,6 +71,45 @@ namespace ColorX
         public Form1()
         {
             InitializeComponent();
+            timer1.Stop();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            // if Control and 1 is pressed at the same time
+            if (e.KeyCode == Keys.D1 && e.Modifiers == Keys.Control)
+            {
+                
+            }
+        }
+
+        private void BtnFindColor_MouseDown(object sender, MouseEventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            Bitmap bmp = new Bitmap(1, 1);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.CopyFromScreen(System.Windows.Forms.Cursor.Position, new Point(0, 0), new Size(1, 1));
+            }
+            Color pixel = bmp.GetPixel(0, 0);
+            
+            txtRValue.Text = bmp.GetPixel(0, 0).R.ToString();
+            txtGValue.Text = bmp.GetPixel(0, 0).G.ToString();
+            txtBValue.Text = bmp.GetPixel(0, 0).B.ToString();
+            txtHexValue.Text = "#" + bmp.GetPixel(0,0).R.ToString("X2") + bmp.GetPixel(0, 0).G.ToString("X2") + bmp.GetPixel(0, 0).B.ToString("X2");
+
+
+            ptbColor.BackColor = pixel;
+            this.Invalidate();
+        }
+
+        private void BtnFindColor_MouseUp(object sender, MouseEventArgs e)
+        {
+            timer1.Stop();
         }
     }
 }
