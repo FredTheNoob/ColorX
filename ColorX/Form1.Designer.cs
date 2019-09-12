@@ -34,6 +34,7 @@
             this.borderBottom = new System.Windows.Forms.PictureBox();
             this.borderRight = new System.Windows.Forms.PictureBox();
             this.borderLeft = new System.Windows.Forms.PictureBox();
+            this.lblHeader = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderRight)).BeginInit();
@@ -119,11 +120,22 @@
             this.borderLeft.TabIndex = 21;
             this.borderLeft.TabStop = false;
             // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(118, 31);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(77, 25);
+            this.lblHeader.TabIndex = 24;
+            this.lblHeader.Text = "ColorX";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 364);
+            this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.borderBottom);
             this.Controls.Add(this.borderRight);
             this.Controls.Add(this.borderLeft);
@@ -150,6 +162,7 @@
         private System.Windows.Forms.PictureBox borderBottom;
         private System.Windows.Forms.PictureBox borderRight;
         private System.Windows.Forms.PictureBox borderLeft;
+        private System.Windows.Forms.Label lblHeader;
     }
 }
 
