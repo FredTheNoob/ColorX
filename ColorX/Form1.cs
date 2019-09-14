@@ -106,14 +106,17 @@ namespace ColorX
         {
             Bitmap preview = new Bitmap(100, 50);
             Bitmap bmp = new Bitmap(1, 1);
+            int curX = Cursor.Position.X;
+            int curY = Cursor.Position.Y;
+
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                g.CopyFromScreen(System.Windows.Forms.Cursor.Position, new Point(0, 0), new Size(1, 1));
+                g.CopyFromScreen(Cursor.Position, new Point(0, 0), new Size(1, 1));
             }
             using (Graphics g = Graphics.FromImage(preview))
             {
                 g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-                g.CopyFromScreen(Cursor.Position, new Point(4, 4), new Size(100, 50));
+                g.CopyFromScreen(new Point(curX - 50, curY - 25), new Point(0, 0), new Size(100, 50));
             }
             Color pixel = bmp.GetPixel(0, 0);
             
