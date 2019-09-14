@@ -90,10 +90,15 @@ namespace ColorX
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            Bitmap preview = new Bitmap(20, 20);
             Bitmap bmp = new Bitmap(1, 1);
             using (Graphics g = Graphics.FromImage(bmp))
             {
                 g.CopyFromScreen(System.Windows.Forms.Cursor.Position, new Point(0, 0), new Size(1, 1));
+            }
+            using (Graphics g = Graphics.FromImage(preview))
+            {
+                g.CopyFromScreen(Cursor.Position, new Point(4, 4), new Size(20, 20));
             }
             Color pixel = bmp.GetPixel(0, 0);
             
@@ -105,6 +110,7 @@ namespace ColorX
 
             ptbColor.BackColor = pixel;
             this.Invalidate();
+            ptbPreview.Image = preview;
         }
 
         private void BtnFindColor_MouseUp(object sender, MouseEventArgs e)
