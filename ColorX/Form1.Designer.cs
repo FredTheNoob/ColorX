@@ -95,7 +95,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(312, 21);
             this.pictureBox1.TabIndex = 18;
@@ -107,7 +107,7 @@
             this.borderBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.borderBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.borderBottom.Location = new System.Drawing.Point(5, 359);
-            this.borderBottom.Margin = new System.Windows.Forms.Padding(2);
+            this.borderBottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.borderBottom.Name = "borderBottom";
             this.borderBottom.Size = new System.Drawing.Size(302, 5);
             this.borderBottom.TabIndex = 23;
@@ -118,7 +118,7 @@
             this.borderRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.borderRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.borderRight.Location = new System.Drawing.Point(307, 21);
-            this.borderRight.Margin = new System.Windows.Forms.Padding(2);
+            this.borderRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.borderRight.Name = "borderRight";
             this.borderRight.Size = new System.Drawing.Size(5, 343);
             this.borderRight.TabIndex = 22;
@@ -129,7 +129,7 @@
             this.borderLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.borderLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.borderLeft.Location = new System.Drawing.Point(0, 21);
-            this.borderLeft.Margin = new System.Windows.Forms.Padding(2);
+            this.borderLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.borderLeft.Name = "borderLeft";
             this.borderLeft.Size = new System.Drawing.Size(5, 343);
             this.borderLeft.TabIndex = 21;
@@ -206,13 +206,21 @@
             // 
             // btnFindColor
             // 
+            this.btnFindColor.BackColor = System.Drawing.Color.Silver;
+            this.btnFindColor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFindColor.FlatAppearance.BorderSize = 2;
+            this.btnFindColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindColor.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnFindColor.Location = new System.Drawing.Point(106, 288);
             this.btnFindColor.Name = "btnFindColor";
             this.btnFindColor.Size = new System.Drawing.Size(99, 49);
             this.btnFindColor.TabIndex = 34;
-            this.btnFindColor.Text = "Find color";
-            this.btnFindColor.UseVisualStyleBackColor = true;
+            this.btnFindColor.Text = "Pick Color";
+            this.btnFindColor.UseVisualStyleBackColor = false;
             this.btnFindColor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnFindColor_MouseDown);
+            this.btnFindColor.MouseEnter += new System.EventHandler(this.BtnFindColor_MouseEnter);
+            this.btnFindColor.MouseLeave += new System.EventHandler(this.BtnFindColor_MouseLeave);
             this.btnFindColor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnFindColor_MouseUp);
             // 
             // timer1

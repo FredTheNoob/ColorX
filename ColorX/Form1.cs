@@ -64,6 +64,20 @@ namespace ColorX
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void BtnFindColor_MouseEnter(object sender, EventArgs e)
+        {
+            btnFindColor.BackColor = Color.FromArgb(64, 64, 64);
+            btnFindColor.FlatAppearance.BorderColor = Color.Silver;
+            btnFindColor.ForeColor = Color.Silver;
+        }
+
+        private void BtnFindColor_MouseLeave(object sender, EventArgs e)
+        {
+            btnFindColor.BackColor = Color.Silver;
+            btnFindColor.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            btnFindColor.ForeColor = Color.FromArgb(64, 64, 64);
+        }
+
         #endregion FormControls
 
 
@@ -117,5 +131,7 @@ namespace ColorX
         {
             timer1.Stop();
         }
+
+        
     }
 }
