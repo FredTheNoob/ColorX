@@ -48,12 +48,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtHexValue = new System.Windows.Forms.TextBox();
             this.ptbPreview = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory2 = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory3 = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory4 = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory5 = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory6 = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory7 = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory8 = new System.Windows.Forms.PictureBox();
+            this.ptbColorHistory9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory9)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -147,7 +165,7 @@
             // 
             // ptbColor
             // 
-            this.ptbColor.Location = new System.Drawing.Point(106, 62);
+            this.ptbColor.Location = new System.Drawing.Point(106, 58);
             this.ptbColor.Name = "ptbColor";
             this.ptbColor.Size = new System.Drawing.Size(100, 50);
             this.ptbColor.TabIndex = 25;
@@ -155,21 +173,21 @@
             // 
             // txtRValue
             // 
-            this.txtRValue.Location = new System.Drawing.Point(106, 121);
+            this.txtRValue.Location = new System.Drawing.Point(106, 117);
             this.txtRValue.Name = "txtRValue";
             this.txtRValue.Size = new System.Drawing.Size(100, 20);
             this.txtRValue.TabIndex = 27;
             // 
             // txtGValue
             // 
-            this.txtGValue.Location = new System.Drawing.Point(106, 147);
+            this.txtGValue.Location = new System.Drawing.Point(106, 143);
             this.txtGValue.Name = "txtGValue";
             this.txtGValue.Size = new System.Drawing.Size(100, 20);
             this.txtGValue.TabIndex = 28;
             // 
             // txtBValue
             // 
-            this.txtBValue.Location = new System.Drawing.Point(106, 173);
+            this.txtBValue.Location = new System.Drawing.Point(106, 169);
             this.txtBValue.Name = "txtBValue";
             this.txtBValue.Size = new System.Drawing.Size(100, 20);
             this.txtBValue.TabIndex = 29;
@@ -178,7 +196,7 @@
             // 
             this.lblRValue.AutoSize = true;
             this.lblRValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRValue.Location = new System.Drawing.Point(80, 123);
+            this.lblRValue.Location = new System.Drawing.Point(80, 119);
             this.lblRValue.Name = "lblRValue";
             this.lblRValue.Size = new System.Drawing.Size(23, 16);
             this.lblRValue.TabIndex = 30;
@@ -188,7 +206,7 @@
             // 
             this.lblGValue.AutoSize = true;
             this.lblGValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGValue.Location = new System.Drawing.Point(80, 149);
+            this.lblGValue.Location = new System.Drawing.Point(80, 145);
             this.lblGValue.Name = "lblGValue";
             this.lblGValue.Size = new System.Drawing.Size(23, 16);
             this.lblGValue.TabIndex = 31;
@@ -198,7 +216,7 @@
             // 
             this.lblBValue.AutoSize = true;
             this.lblBValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBValue.Location = new System.Drawing.Point(81, 175);
+            this.lblBValue.Location = new System.Drawing.Point(81, 171);
             this.lblBValue.Name = "lblBValue";
             this.lblBValue.Size = new System.Drawing.Size(22, 16);
             this.lblBValue.TabIndex = 32;
@@ -212,7 +230,7 @@
             this.btnFindColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindColor.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFindColor.Location = new System.Drawing.Point(106, 252);
+            this.btnFindColor.Location = new System.Drawing.Point(106, 244);
             this.btnFindColor.Name = "btnFindColor";
             this.btnFindColor.Size = new System.Drawing.Size(99, 49);
             this.btnFindColor.TabIndex = 34;
@@ -232,7 +250,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 201);
+            this.label1.Location = new System.Drawing.Point(98, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 35;
@@ -240,25 +258,106 @@
             // 
             // txtHexValue
             // 
-            this.txtHexValue.Location = new System.Drawing.Point(106, 220);
+            this.txtHexValue.Location = new System.Drawing.Point(106, 216);
             this.txtHexValue.Name = "txtHexValue";
             this.txtHexValue.Size = new System.Drawing.Size(100, 20);
             this.txtHexValue.TabIndex = 36;
             // 
             // ptbPreview
             // 
-            this.ptbPreview.Location = new System.Drawing.Point(106, 306);
+            this.ptbPreview.Location = new System.Drawing.Point(106, 302);
             this.ptbPreview.Name = "ptbPreview";
             this.ptbPreview.Size = new System.Drawing.Size(100, 50);
             this.ptbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbPreview.TabIndex = 37;
             this.ptbPreview.TabStop = false;
             // 
+            // ptbColorHistory
+            // 
+            this.ptbColorHistory.Location = new System.Drawing.Point(232, 58);
+            this.ptbColorHistory.Name = "ptbColorHistory";
+            this.ptbColorHistory.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory.TabIndex = 38;
+            this.ptbColorHistory.TabStop = false;
+            // 
+            // ptbColorHistory2
+            // 
+            this.ptbColorHistory2.Location = new System.Drawing.Point(232, 90);
+            this.ptbColorHistory2.Name = "ptbColorHistory2";
+            this.ptbColorHistory2.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory2.TabIndex = 39;
+            this.ptbColorHistory2.TabStop = false;
+            // 
+            // ptbColorHistory3
+            // 
+            this.ptbColorHistory3.Location = new System.Drawing.Point(232, 123);
+            this.ptbColorHistory3.Name = "ptbColorHistory3";
+            this.ptbColorHistory3.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory3.TabIndex = 40;
+            this.ptbColorHistory3.TabStop = false;
+            // 
+            // ptbColorHistory4
+            // 
+            this.ptbColorHistory4.Location = new System.Drawing.Point(232, 158);
+            this.ptbColorHistory4.Name = "ptbColorHistory4";
+            this.ptbColorHistory4.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory4.TabIndex = 41;
+            this.ptbColorHistory4.TabStop = false;
+            // 
+            // ptbColorHistory5
+            // 
+            this.ptbColorHistory5.Location = new System.Drawing.Point(232, 193);
+            this.ptbColorHistory5.Name = "ptbColorHistory5";
+            this.ptbColorHistory5.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory5.TabIndex = 42;
+            this.ptbColorHistory5.TabStop = false;
+            // 
+            // ptbColorHistory6
+            // 
+            this.ptbColorHistory6.Location = new System.Drawing.Point(232, 226);
+            this.ptbColorHistory6.Name = "ptbColorHistory6";
+            this.ptbColorHistory6.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory6.TabIndex = 43;
+            this.ptbColorHistory6.TabStop = false;
+            // 
+            // ptbColorHistory7
+            // 
+            this.ptbColorHistory7.Location = new System.Drawing.Point(232, 260);
+            this.ptbColorHistory7.Name = "ptbColorHistory7";
+            this.ptbColorHistory7.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory7.TabIndex = 44;
+            this.ptbColorHistory7.TabStop = false;
+            // 
+            // ptbColorHistory8
+            // 
+            this.ptbColorHistory8.Location = new System.Drawing.Point(232, 294);
+            this.ptbColorHistory8.Name = "ptbColorHistory8";
+            this.ptbColorHistory8.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory8.TabIndex = 45;
+            this.ptbColorHistory8.TabStop = false;
+            // 
+            // ptbColorHistory9
+            // 
+            this.ptbColorHistory9.Location = new System.Drawing.Point(232, 327);
+            this.ptbColorHistory9.Name = "ptbColorHistory9";
+            this.ptbColorHistory9.Size = new System.Drawing.Size(50, 25);
+            this.ptbColorHistory9.TabIndex = 46;
+            this.ptbColorHistory9.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 364);
+            this.Controls.Add(this.ptbColorHistory9);
+            this.Controls.Add(this.ptbColorHistory8);
+            this.Controls.Add(this.ptbColorHistory7);
+            this.Controls.Add(this.ptbColorHistory6);
+            this.Controls.Add(this.ptbColorHistory5);
+            this.Controls.Add(this.ptbColorHistory4);
+            this.Controls.Add(this.ptbColorHistory3);
+            this.Controls.Add(this.ptbColorHistory2);
+            this.Controls.Add(this.ptbColorHistory);
             this.Controls.Add(this.ptbPreview);
             this.Controls.Add(this.txtHexValue);
             this.Controls.Add(this.label1);
@@ -287,6 +386,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.borderLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +421,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHexValue;
         private System.Windows.Forms.PictureBox ptbPreview;
+        private System.Windows.Forms.PictureBox ptbColorHistory;
+        private System.Windows.Forms.PictureBox ptbColorHistory2;
+        private System.Windows.Forms.PictureBox ptbColorHistory3;
+        private System.Windows.Forms.PictureBox ptbColorHistory4;
+        private System.Windows.Forms.PictureBox ptbColorHistory5;
+        private System.Windows.Forms.PictureBox ptbColorHistory6;
+        private System.Windows.Forms.PictureBox ptbColorHistory7;
+        private System.Windows.Forms.PictureBox ptbColorHistory8;
+        private System.Windows.Forms.PictureBox ptbColorHistory9;
     }
 }
 

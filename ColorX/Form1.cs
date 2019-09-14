@@ -135,6 +135,8 @@ namespace ColorX
         private void BtnFindColor_MouseUp(object sender, MouseEventArgs e)
         {
             timer1.Stop();
+
+            ptbColorHistory.BackColor = ptbColor.BackColor;
         }
 
         
