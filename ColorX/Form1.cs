@@ -104,7 +104,7 @@ namespace ColorX
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            Bitmap preview = new Bitmap(20, 20);
+            Bitmap preview = new Bitmap(100, 50);
             Bitmap bmp = new Bitmap(1, 1);
             using (Graphics g = Graphics.FromImage(bmp))
             {
@@ -112,7 +112,8 @@ namespace ColorX
             }
             using (Graphics g = Graphics.FromImage(preview))
             {
-                g.CopyFromScreen(Cursor.Position, new Point(4, 4), new Size(20, 20));
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+                g.CopyFromScreen(Cursor.Position, new Point(4, 4), new Size(100, 50));
             }
             Color pixel = bmp.GetPixel(0, 0);
             
