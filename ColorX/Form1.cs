@@ -117,6 +117,7 @@ namespace ColorX
             {
                 g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
                 g.CopyFromScreen(new Point(curX - 50, curY - 25), new Point(0, 0), new Size(100, 50));
+                g.DrawRectangle(Pens.Black, 47.5f, 23.5f, 5, 5);
             }
             Color pixel = bmp.GetPixel(0, 0);
             
@@ -127,8 +128,8 @@ namespace ColorX
 
 
             ptbColor.BackColor = pixel;
-            this.Invalidate();
             ptbPreview.Image = preview;
+            this.Invalidate();
         }
 
         private void BtnFindColor_MouseUp(object sender, MouseEventArgs e)
