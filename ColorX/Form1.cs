@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -13,6 +14,8 @@ namespace ColorX
 {
     public partial class Form1 : Form
     {
+        Color currColor;
+        List<Color> colors = new List<Color>(); 
 
         #region customUI
 
@@ -82,6 +85,7 @@ namespace ColorX
 
 
         #endregion customUI
+
         public Form1()
         {
             InitializeComponent();
@@ -96,10 +100,24 @@ namespace ColorX
                 
             }
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ptbColorHistory.Visible = false;
+            ptbColorHistory2.Visible = false;
+            ptbColorHistory3.Visible = false;
+            ptbColorHistory4.Visible = false;
+            ptbColorHistory5.Visible = false;
+            ptbColorHistory6.Visible = false;
+            ptbColorHistory7.Visible = false;
+            ptbColorHistory8.Visible = false;
+            ptbColorHistory9.Visible = false;
+        }
 
         private void BtnFindColor_MouseDown(object sender, MouseEventArgs e)
         {
             timer1.Start();
+
+            this.Cursor = Cursors.Cross;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -126,7 +144,7 @@ namespace ColorX
             txtBValue.Text = bmp.GetPixel(0, 0).B.ToString();
             txtHexValue.Text = "#" + bmp.GetPixel(0,0).R.ToString("X2") + bmp.GetPixel(0, 0).G.ToString("X2") + bmp.GetPixel(0, 0).B.ToString("X2");
 
-
+            currColor = pixel;
             ptbColor.BackColor = pixel;
             ptbPreview.Image = preview;
             this.Invalidate();
@@ -136,9 +154,65 @@ namespace ColorX
         {
             timer1.Stop();
 
-            ptbColorHistory.BackColor = ptbColor.BackColor;
+            this.Cursor = Cursors.Default;
+
+            colors.Add(currColor);
+
+            try
+            {
+                ptbColorHistory.Visible = true;
+                ptbColorHistory.BackColor = colors[colors.Count-1];
+
+                ptbColorHistory2.Visible = true;
+                ptbColorHistory2.BackColor = colors[colors.Count-2];
+
+                ptbColorHistory3.Visible = true;
+                ptbColorHistory3.BackColor = colors[colors.Count-3];
+
+                ptbColorHistory4.Visible = true;
+                ptbColorHistory4.BackColor = colors[colors.Count-4];
+
+                ptbColorHistory5.Visible = true;
+                ptbColorHistory5.BackColor = colors[colors.Count-5];
+
+                ptbColorHistory6.Visible = true;
+                ptbColorHistory6.BackColor = colors[colors.Count-6];
+
+                ptbColorHistory7.Visible = true;
+                ptbColorHistory7.BackColor = colors[colors.Count-7];
+
+                ptbColorHistory8.Visible = true;
+                ptbColorHistory8.BackColor = colors[colors.Count-8];
+
+                ptbColorHistory9.Visible = true;
+                ptbColorHistory9.BackColor = colors[colors.Count-9];
+            }
+            catch (Exception)
+            {
+            }                 
+            
         }
 
-        
+        private void LoadColor_Click(object sender, EventArgs e)
+        {
+            PictureBox ptbClicked = sender as PictureBox;
+
+            ptbColor.BackColor = ptbClicked.BackColor;
+            
+            txtRValue.Text = ptbClicked.BackColor.R.ToString();
+            txtGValue.Text = ptbClicked.BackColor.G.ToString();
+            txtBValue.Text = ptbClicked.BackColor.B.ToString();
+            txtHexValue.Text = "#" + ptbClicked.BackColor.R.ToString("X2") + ptbClicked.BackColor.G.ToString("X2") + ptbClicked.BackColor.B.ToString("X2");
+        }
+
+        private void ChangeCursor_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = new Cursor(new MemoryStream(Properties.Resources.aero_pen));
+        }
+
+        private void ChangeCursor_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
     }
 }

@@ -165,6 +165,7 @@
             // 
             // ptbColor
             // 
+            this.ptbColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColor.Location = new System.Drawing.Point(106, 58);
             this.ptbColor.Name = "ptbColor";
             this.ptbColor.Size = new System.Drawing.Size(100, 50);
@@ -274,75 +275,111 @@
             // 
             // ptbColorHistory
             // 
+            this.ptbColorHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory.Location = new System.Drawing.Point(232, 58);
             this.ptbColorHistory.Name = "ptbColorHistory";
             this.ptbColorHistory.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory.TabIndex = 38;
             this.ptbColorHistory.TabStop = false;
+            this.ptbColorHistory.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // ptbColorHistory2
             // 
+            this.ptbColorHistory2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory2.Location = new System.Drawing.Point(232, 90);
             this.ptbColorHistory2.Name = "ptbColorHistory2";
             this.ptbColorHistory2.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory2.TabIndex = 39;
             this.ptbColorHistory2.TabStop = false;
+            this.ptbColorHistory2.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory2.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory2.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // ptbColorHistory3
             // 
+            this.ptbColorHistory3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory3.Location = new System.Drawing.Point(232, 123);
             this.ptbColorHistory3.Name = "ptbColorHistory3";
             this.ptbColorHistory3.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory3.TabIndex = 40;
             this.ptbColorHistory3.TabStop = false;
+            this.ptbColorHistory3.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory3.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory3.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // ptbColorHistory4
             // 
+            this.ptbColorHistory4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory4.Location = new System.Drawing.Point(232, 158);
             this.ptbColorHistory4.Name = "ptbColorHistory4";
             this.ptbColorHistory4.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory4.TabIndex = 41;
             this.ptbColorHistory4.TabStop = false;
+            this.ptbColorHistory4.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory4.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory4.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // ptbColorHistory5
             // 
+            this.ptbColorHistory5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory5.Location = new System.Drawing.Point(232, 193);
             this.ptbColorHistory5.Name = "ptbColorHistory5";
             this.ptbColorHistory5.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory5.TabIndex = 42;
             this.ptbColorHistory5.TabStop = false;
+            this.ptbColorHistory5.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory5.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory5.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // ptbColorHistory6
             // 
+            this.ptbColorHistory6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory6.Location = new System.Drawing.Point(232, 226);
             this.ptbColorHistory6.Name = "ptbColorHistory6";
             this.ptbColorHistory6.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory6.TabIndex = 43;
             this.ptbColorHistory6.TabStop = false;
+            this.ptbColorHistory6.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory6.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory6.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // ptbColorHistory7
             // 
+            this.ptbColorHistory7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory7.Location = new System.Drawing.Point(232, 260);
             this.ptbColorHistory7.Name = "ptbColorHistory7";
             this.ptbColorHistory7.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory7.TabIndex = 44;
             this.ptbColorHistory7.TabStop = false;
+            this.ptbColorHistory7.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory7.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory7.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // ptbColorHistory8
             // 
+            this.ptbColorHistory8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory8.Location = new System.Drawing.Point(232, 294);
             this.ptbColorHistory8.Name = "ptbColorHistory8";
             this.ptbColorHistory8.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory8.TabIndex = 45;
             this.ptbColorHistory8.TabStop = false;
+            this.ptbColorHistory8.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory8.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory8.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // ptbColorHistory9
             // 
+            this.ptbColorHistory9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbColorHistory9.Location = new System.Drawing.Point(232, 327);
             this.ptbColorHistory9.Name = "ptbColorHistory9";
             this.ptbColorHistory9.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory9.TabIndex = 46;
             this.ptbColorHistory9.TabStop = false;
+            this.ptbColorHistory9.Click += new System.EventHandler(this.LoadColor_Click);
+            this.ptbColorHistory9.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
+            this.ptbColorHistory9.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
             // Form1
             // 
@@ -379,6 +416,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).EndInit();
