@@ -111,6 +111,7 @@ namespace ColorX
             ptbColorHistory7.Visible = false;
             ptbColorHistory8.Visible = false;
             ptbColorHistory9.Visible = false;
+            RectPtbCrosshair.Visible = false;
         }
 
         private void BtnFindColor_MouseDown(object sender, MouseEventArgs e)
@@ -118,6 +119,10 @@ namespace ColorX
             timer1.Start();
 
             this.Cursor = Cursors.Cross;
+
+
+            RectPtbCrosshair.BackColor = Color.FromArgb(0, 255, 255, 255);
+            RectPtbCrosshair.Visible = true;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -135,7 +140,7 @@ namespace ColorX
             {
                 g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
                 g.CopyFromScreen(new Point(curX - 50, curY - 25), new Point(0, 0), new Size(100, 50));
-                g.DrawRectangle(Pens.Black, 47.5f, 23.5f, 5, 5);
+                //g.DrawRectangle(Pens.Black, 47.5f, 23.5f, 5, 5);
             }
             Color pixel = bmp.GetPixel(0, 0);
             
@@ -189,8 +194,9 @@ namespace ColorX
             }
             catch (Exception)
             {
-            }                 
-            
+            }
+
+            RectPtbCrosshair.Visible = false;
         }
 
         private void LoadColor_Click(object sender, EventArgs e)

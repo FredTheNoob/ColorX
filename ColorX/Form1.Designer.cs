@@ -57,6 +57,7 @@
             this.ptbColorHistory7 = new System.Windows.Forms.PictureBox();
             this.ptbColorHistory8 = new System.Windows.Forms.PictureBox();
             this.ptbColorHistory9 = new System.Windows.Forms.PictureBox();
+            this.RectPtbCrosshair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderRight)).BeginInit();
@@ -381,11 +382,26 @@
             this.ptbColorHistory9.MouseEnter += new System.EventHandler(this.ChangeCursor_MouseEnter);
             this.ptbColorHistory9.MouseLeave += new System.EventHandler(this.ChangeCursor_MouseLeave);
             // 
+            // RectPtbCrosshair
+            // 
+            this.RectPtbCrosshair.BackColor = System.Drawing.Color.Transparent;
+            this.RectPtbCrosshair.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RectPtbCrosshair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.RectPtbCrosshair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.RectPtbCrosshair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RectPtbCrosshair.ForeColor = System.Drawing.Color.Transparent;
+            this.RectPtbCrosshair.Location = new System.Drawing.Point(154, 325);
+            this.RectPtbCrosshair.Name = "RectPtbCrosshair";
+            this.RectPtbCrosshair.Size = new System.Drawing.Size(5, 5);
+            this.RectPtbCrosshair.TabIndex = 47;
+            this.RectPtbCrosshair.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 364);
+            this.Controls.Add(this.RectPtbCrosshair);
             this.Controls.Add(this.ptbColorHistory9);
             this.Controls.Add(this.ptbColorHistory8);
             this.Controls.Add(this.ptbColorHistory7);
@@ -468,6 +484,7 @@
         private System.Windows.Forms.PictureBox ptbColorHistory7;
         private System.Windows.Forms.PictureBox ptbColorHistory8;
         private System.Windows.Forms.PictureBox ptbColorHistory9;
+        private System.Windows.Forms.Button RectPtbCrosshair;
     }
 }
 
