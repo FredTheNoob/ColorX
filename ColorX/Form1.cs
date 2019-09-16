@@ -154,7 +154,7 @@ namespace ColorX
             this.Cursor = Cursors.Cross;
 
 
-            RectPtbCrosshair.BackColor = Color.FromArgb(0, 255, 255, 255);
+            //RectPtbCrosshair.BackColor = Color.FromArgb(0, 255, 255, 255);
             RectPtbCrosshair.Visible = true;
             RectPtbCrosshair.BackColor = Color.FromArgb(143, 143, 143);
         }
@@ -162,7 +162,6 @@ namespace ColorX
         private void Timer1_Tick(object sender, EventArgs e)
         {
             Bitmap bmp = new Bitmap(1, 1);
-
 
             int curX = Cursor.Position.X;
             int curY = Cursor.Position.Y;
