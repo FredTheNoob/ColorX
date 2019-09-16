@@ -81,6 +81,34 @@ namespace ColorX
             btnFindColor.ForeColor = Color.FromArgb(64, 64, 64);
         }
 
+        private void BtnZoomIn_MouseEnter(object sender, EventArgs e)
+        {
+            btnZoomIn.BackColor = Color.FromArgb(64, 64, 64);
+            btnZoomIn.FlatAppearance.BorderColor = Color.Silver;
+            btnZoomIn.ForeColor = Color.Silver;
+        }
+
+        private void BtnZoomIn_MouseLeave(object sender, EventArgs e)
+        {
+            btnZoomIn.BackColor = Color.Silver;
+            btnZoomIn.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            btnZoomIn.ForeColor = Color.FromArgb(64, 64, 64);
+        }
+
+        private void BtnZoomOut_MouseEnter(object sender, EventArgs e)
+        {
+            btnZoomOut.BackColor = Color.FromArgb(64, 64, 64);
+            btnZoomOut.FlatAppearance.BorderColor = Color.Silver;
+            btnZoomOut.ForeColor = Color.Silver;
+        }
+
+        private void BtnZoomOut_MouseLeave(object sender, EventArgs e)
+        {
+            btnZoomOut.BackColor = Color.Silver;
+            btnZoomOut.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            btnZoomOut.ForeColor = Color.FromArgb(64, 64, 64);
+        }
+
         #endregion FormControls
 
 
@@ -112,6 +140,8 @@ namespace ColorX
             ptbColorHistory8.Visible = false;
             ptbColorHistory9.Visible = false;
             RectPtbCrosshair.Visible = false;
+            btnZoomIn.Visible = false;
+            btnZoomOut.Visible = false;
         }
 
         private void BtnFindColor_MouseDown(object sender, MouseEventArgs e)
@@ -154,7 +184,8 @@ namespace ColorX
             currColor = pixel;
             ptbColor.BackColor = pixel;
             ptbPreview.Image = preview;
-            
+            lblStatus.Text = "Color found!";
+
             this.Invalidate();
         }
 
@@ -201,6 +232,9 @@ namespace ColorX
             }
 
             RectPtbCrosshair.Visible = false;
+
+            btnZoomIn.Visible = true;
+            btnZoomOut.Visible = true;
         }
 
         private void LoadColor_Click(object sender, EventArgs e)
@@ -224,5 +258,7 @@ namespace ColorX
         {
             this.Cursor = Cursors.Default;
         }
+
+
     }
 }

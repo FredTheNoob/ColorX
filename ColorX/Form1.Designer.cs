@@ -58,6 +58,11 @@
             this.ptbColorHistory8 = new System.Windows.Forms.PictureBox();
             this.ptbColorHistory9 = new System.Windows.Forms.PictureBox();
             this.RectPtbCrosshair = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnZoomIn = new System.Windows.Forms.Button();
+            this.btnZoomOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderRight)).BeginInit();
@@ -74,6 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RectPtbCrosshair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -126,7 +133,7 @@
             // 
             this.borderBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.borderBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.borderBottom.Location = new System.Drawing.Point(5, 359);
+            this.borderBottom.Location = new System.Drawing.Point(5, 368);
             this.borderBottom.Margin = new System.Windows.Forms.Padding(2);
             this.borderBottom.Name = "borderBottom";
             this.borderBottom.Size = new System.Drawing.Size(302, 5);
@@ -140,7 +147,7 @@
             this.borderRight.Location = new System.Drawing.Point(307, 21);
             this.borderRight.Margin = new System.Windows.Forms.Padding(2);
             this.borderRight.Name = "borderRight";
-            this.borderRight.Size = new System.Drawing.Size(5, 343);
+            this.borderRight.Size = new System.Drawing.Size(5, 352);
             this.borderRight.TabIndex = 22;
             this.borderRight.TabStop = false;
             // 
@@ -151,7 +158,7 @@
             this.borderLeft.Location = new System.Drawing.Point(0, 21);
             this.borderLeft.Margin = new System.Windows.Forms.Padding(2);
             this.borderLeft.Name = "borderLeft";
-            this.borderLeft.Size = new System.Drawing.Size(5, 343);
+            this.borderLeft.Size = new System.Drawing.Size(5, 352);
             this.borderLeft.TabIndex = 21;
             this.borderLeft.TabStop = false;
             // 
@@ -159,7 +166,7 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(118, 31);
+            this.lblHeader.Location = new System.Drawing.Point(118, 23);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(83, 25);
             this.lblHeader.TabIndex = 24;
@@ -168,7 +175,7 @@
             // ptbColor
             // 
             this.ptbColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColor.Location = new System.Drawing.Point(106, 58);
+            this.ptbColor.Location = new System.Drawing.Point(106, 50);
             this.ptbColor.Name = "ptbColor";
             this.ptbColor.Size = new System.Drawing.Size(100, 50);
             this.ptbColor.TabIndex = 25;
@@ -176,21 +183,21 @@
             // 
             // txtRValue
             // 
-            this.txtRValue.Location = new System.Drawing.Point(106, 117);
+            this.txtRValue.Location = new System.Drawing.Point(106, 109);
             this.txtRValue.Name = "txtRValue";
             this.txtRValue.Size = new System.Drawing.Size(100, 20);
             this.txtRValue.TabIndex = 27;
             // 
             // txtGValue
             // 
-            this.txtGValue.Location = new System.Drawing.Point(106, 143);
+            this.txtGValue.Location = new System.Drawing.Point(106, 135);
             this.txtGValue.Name = "txtGValue";
             this.txtGValue.Size = new System.Drawing.Size(100, 20);
             this.txtGValue.TabIndex = 28;
             // 
             // txtBValue
             // 
-            this.txtBValue.Location = new System.Drawing.Point(106, 169);
+            this.txtBValue.Location = new System.Drawing.Point(106, 161);
             this.txtBValue.Name = "txtBValue";
             this.txtBValue.Size = new System.Drawing.Size(100, 20);
             this.txtBValue.TabIndex = 29;
@@ -199,7 +206,7 @@
             // 
             this.lblRValue.AutoSize = true;
             this.lblRValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRValue.Location = new System.Drawing.Point(80, 119);
+            this.lblRValue.Location = new System.Drawing.Point(80, 111);
             this.lblRValue.Name = "lblRValue";
             this.lblRValue.Size = new System.Drawing.Size(23, 16);
             this.lblRValue.TabIndex = 30;
@@ -209,7 +216,7 @@
             // 
             this.lblGValue.AutoSize = true;
             this.lblGValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGValue.Location = new System.Drawing.Point(80, 145);
+            this.lblGValue.Location = new System.Drawing.Point(80, 137);
             this.lblGValue.Name = "lblGValue";
             this.lblGValue.Size = new System.Drawing.Size(23, 16);
             this.lblGValue.TabIndex = 31;
@@ -219,7 +226,7 @@
             // 
             this.lblBValue.AutoSize = true;
             this.lblBValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBValue.Location = new System.Drawing.Point(81, 171);
+            this.lblBValue.Location = new System.Drawing.Point(81, 163);
             this.lblBValue.Name = "lblBValue";
             this.lblBValue.Size = new System.Drawing.Size(22, 16);
             this.lblBValue.TabIndex = 32;
@@ -233,7 +240,7 @@
             this.btnFindColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindColor.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFindColor.Location = new System.Drawing.Point(106, 244);
+            this.btnFindColor.Location = new System.Drawing.Point(106, 236);
             this.btnFindColor.Name = "btnFindColor";
             this.btnFindColor.Size = new System.Drawing.Size(99, 49);
             this.btnFindColor.TabIndex = 34;
@@ -253,7 +260,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 197);
+            this.label1.Location = new System.Drawing.Point(98, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 35;
@@ -261,14 +268,14 @@
             // 
             // txtHexValue
             // 
-            this.txtHexValue.Location = new System.Drawing.Point(106, 216);
+            this.txtHexValue.Location = new System.Drawing.Point(106, 208);
             this.txtHexValue.Name = "txtHexValue";
             this.txtHexValue.Size = new System.Drawing.Size(100, 20);
             this.txtHexValue.TabIndex = 36;
             // 
             // ptbPreview
             // 
-            this.ptbPreview.Location = new System.Drawing.Point(106, 302);
+            this.ptbPreview.Location = new System.Drawing.Point(106, 294);
             this.ptbPreview.Name = "ptbPreview";
             this.ptbPreview.Size = new System.Drawing.Size(100, 50);
             this.ptbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -278,7 +285,7 @@
             // ptbColorHistory
             // 
             this.ptbColorHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory.Location = new System.Drawing.Point(232, 58);
+            this.ptbColorHistory.Location = new System.Drawing.Point(232, 50);
             this.ptbColorHistory.Name = "ptbColorHistory";
             this.ptbColorHistory.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory.TabIndex = 38;
@@ -290,7 +297,7 @@
             // ptbColorHistory2
             // 
             this.ptbColorHistory2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory2.Location = new System.Drawing.Point(232, 90);
+            this.ptbColorHistory2.Location = new System.Drawing.Point(232, 82);
             this.ptbColorHistory2.Name = "ptbColorHistory2";
             this.ptbColorHistory2.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory2.TabIndex = 39;
@@ -302,7 +309,7 @@
             // ptbColorHistory3
             // 
             this.ptbColorHistory3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory3.Location = new System.Drawing.Point(232, 123);
+            this.ptbColorHistory3.Location = new System.Drawing.Point(232, 115);
             this.ptbColorHistory3.Name = "ptbColorHistory3";
             this.ptbColorHistory3.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory3.TabIndex = 40;
@@ -314,7 +321,7 @@
             // ptbColorHistory4
             // 
             this.ptbColorHistory4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory4.Location = new System.Drawing.Point(232, 158);
+            this.ptbColorHistory4.Location = new System.Drawing.Point(232, 150);
             this.ptbColorHistory4.Name = "ptbColorHistory4";
             this.ptbColorHistory4.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory4.TabIndex = 41;
@@ -326,7 +333,7 @@
             // ptbColorHistory5
             // 
             this.ptbColorHistory5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory5.Location = new System.Drawing.Point(232, 193);
+            this.ptbColorHistory5.Location = new System.Drawing.Point(232, 185);
             this.ptbColorHistory5.Name = "ptbColorHistory5";
             this.ptbColorHistory5.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory5.TabIndex = 42;
@@ -338,7 +345,7 @@
             // ptbColorHistory6
             // 
             this.ptbColorHistory6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory6.Location = new System.Drawing.Point(232, 226);
+            this.ptbColorHistory6.Location = new System.Drawing.Point(232, 218);
             this.ptbColorHistory6.Name = "ptbColorHistory6";
             this.ptbColorHistory6.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory6.TabIndex = 43;
@@ -350,7 +357,7 @@
             // ptbColorHistory7
             // 
             this.ptbColorHistory7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory7.Location = new System.Drawing.Point(232, 260);
+            this.ptbColorHistory7.Location = new System.Drawing.Point(232, 252);
             this.ptbColorHistory7.Name = "ptbColorHistory7";
             this.ptbColorHistory7.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory7.TabIndex = 44;
@@ -362,7 +369,7 @@
             // ptbColorHistory8
             // 
             this.ptbColorHistory8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory8.Location = new System.Drawing.Point(232, 294);
+            this.ptbColorHistory8.Location = new System.Drawing.Point(232, 286);
             this.ptbColorHistory8.Name = "ptbColorHistory8";
             this.ptbColorHistory8.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory8.TabIndex = 45;
@@ -374,7 +381,7 @@
             // ptbColorHistory9
             // 
             this.ptbColorHistory9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbColorHistory9.Location = new System.Drawing.Point(232, 327);
+            this.ptbColorHistory9.Location = new System.Drawing.Point(232, 319);
             this.ptbColorHistory9.Name = "ptbColorHistory9";
             this.ptbColorHistory9.Size = new System.Drawing.Size(50, 25);
             this.ptbColorHistory9.TabIndex = 46;
@@ -386,17 +393,89 @@
             // RectPtbCrosshair
             // 
             this.RectPtbCrosshair.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RectPtbCrosshair.Location = new System.Drawing.Point(154, 324);
+            this.RectPtbCrosshair.Location = new System.Drawing.Point(154, 316);
             this.RectPtbCrosshair.Name = "RectPtbCrosshair";
             this.RectPtbCrosshair.Size = new System.Drawing.Size(5, 5);
             this.RectPtbCrosshair.TabIndex = 47;
             this.RectPtbCrosshair.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox2.Location = new System.Drawing.Point(5, 349);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(302, 19);
+            this.pictureBox2.TabIndex = 48;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Silver;
+            this.lblStatus.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(12, 351);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(136, 15);
+            this.lblStatus.TabIndex = 49;
+            this.lblStatus.Text = "Welcome to ColorX!";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox3.Location = new System.Drawing.Point(5, 347);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(302, 2);
+            this.pictureBox3.TabIndex = 50;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnZoomIn
+            // 
+            this.btnZoomIn.BackColor = System.Drawing.Color.Silver;
+            this.btnZoomIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnZoomIn.FlatAppearance.BorderSize = 2;
+            this.btnZoomIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZoomIn.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZoomIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnZoomIn.Location = new System.Drawing.Point(84, 294);
+            this.btnZoomIn.Name = "btnZoomIn";
+            this.btnZoomIn.Size = new System.Drawing.Size(16, 26);
+            this.btnZoomIn.TabIndex = 52;
+            this.btnZoomIn.Text = "+";
+            this.btnZoomIn.UseVisualStyleBackColor = false;
+            this.btnZoomIn.MouseEnter += new System.EventHandler(this.BtnZoomIn_MouseEnter);
+            this.btnZoomIn.MouseLeave += new System.EventHandler(this.BtnZoomIn_MouseLeave);
+            // 
+            // btnZoomOut
+            // 
+            this.btnZoomOut.BackColor = System.Drawing.Color.Silver;
+            this.btnZoomOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnZoomOut.FlatAppearance.BorderSize = 2;
+            this.btnZoomOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZoomOut.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZoomOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnZoomOut.Location = new System.Drawing.Point(84, 319);
+            this.btnZoomOut.Name = "btnZoomOut";
+            this.btnZoomOut.Size = new System.Drawing.Size(16, 25);
+            this.btnZoomOut.TabIndex = 53;
+            this.btnZoomOut.Text = "-";
+            this.btnZoomOut.UseVisualStyleBackColor = false;
+            this.btnZoomOut.MouseEnter += new System.EventHandler(this.BtnZoomOut_MouseEnter);
+            this.btnZoomOut.MouseLeave += new System.EventHandler(this.BtnZoomOut_MouseLeave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 364);
+            this.ClientSize = new System.Drawing.Size(312, 373);
+            this.Controls.Add(this.btnZoomOut);
+            this.Controls.Add(this.btnZoomIn);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.RectPtbCrosshair);
             this.Controls.Add(this.ptbColorHistory9);
             this.Controls.Add(this.ptbColorHistory8);
@@ -446,6 +525,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RectPtbCrosshair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,6 +563,11 @@
         private System.Windows.Forms.PictureBox ptbColorHistory8;
         private System.Windows.Forms.PictureBox ptbColorHistory9;
         private System.Windows.Forms.PictureBox RectPtbCrosshair;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnZoomIn;
+        private System.Windows.Forms.Button btnZoomOut;
     }
 }
 
