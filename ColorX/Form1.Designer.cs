@@ -57,7 +57,7 @@
             this.ptbColorHistory7 = new System.Windows.Forms.PictureBox();
             this.ptbColorHistory8 = new System.Windows.Forms.PictureBox();
             this.ptbColorHistory9 = new System.Windows.Forms.PictureBox();
-            this.RectPtbCrosshair = new System.Windows.Forms.Button();
+            this.RectPtbCrosshair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderRight)).BeginInit();
@@ -73,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RectPtbCrosshair)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -384,17 +385,12 @@
             // 
             // RectPtbCrosshair
             // 
-            this.RectPtbCrosshair.BackColor = System.Drawing.Color.Transparent;
-            this.RectPtbCrosshair.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.RectPtbCrosshair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.RectPtbCrosshair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.RectPtbCrosshair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RectPtbCrosshair.ForeColor = System.Drawing.Color.Transparent;
-            this.RectPtbCrosshair.Location = new System.Drawing.Point(154, 325);
+            this.RectPtbCrosshair.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RectPtbCrosshair.Location = new System.Drawing.Point(154, 324);
             this.RectPtbCrosshair.Name = "RectPtbCrosshair";
             this.RectPtbCrosshair.Size = new System.Drawing.Size(5, 5);
             this.RectPtbCrosshair.TabIndex = 47;
-            this.RectPtbCrosshair.UseVisualStyleBackColor = false;
+            this.RectPtbCrosshair.TabStop = false;
             // 
             // Form1
             // 
@@ -449,6 +445,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbColorHistory9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RectPtbCrosshair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,7 +481,7 @@
         private System.Windows.Forms.PictureBox ptbColorHistory7;
         private System.Windows.Forms.PictureBox ptbColorHistory8;
         private System.Windows.Forms.PictureBox ptbColorHistory9;
-        private System.Windows.Forms.Button RectPtbCrosshair;
+        private System.Windows.Forms.PictureBox RectPtbCrosshair;
     }
 }
 

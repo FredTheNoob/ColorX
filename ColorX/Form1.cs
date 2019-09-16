@@ -152,6 +152,7 @@ namespace ColorX
             currColor = pixel;
             ptbColor.BackColor = pixel;
             ptbPreview.Image = preview;
+            RectPtbCrosshair.BackColor = pixel;
             this.Invalidate();
         }
 
@@ -165,32 +166,33 @@ namespace ColorX
 
             try
             {
-                ptbColorHistory.Visible = true;
+                
                 ptbColorHistory.BackColor = colors[colors.Count-1];
+                ptbColorHistory.Visible = true;
 
-                ptbColorHistory2.Visible = true;
                 ptbColorHistory2.BackColor = colors[colors.Count-2];
+                ptbColorHistory2.Visible = true;
 
-                ptbColorHistory3.Visible = true;
                 ptbColorHistory3.BackColor = colors[colors.Count-3];
+                ptbColorHistory3.Visible = true;
 
-                ptbColorHistory4.Visible = true;
                 ptbColorHistory4.BackColor = colors[colors.Count-4];
+                ptbColorHistory4.Visible = true;
 
-                ptbColorHistory5.Visible = true;
                 ptbColorHistory5.BackColor = colors[colors.Count-5];
+                ptbColorHistory5.Visible = true;
 
-                ptbColorHistory6.Visible = true;
                 ptbColorHistory6.BackColor = colors[colors.Count-6];
+                ptbColorHistory6.Visible = true;
 
-                ptbColorHistory7.Visible = true;
                 ptbColorHistory7.BackColor = colors[colors.Count-7];
+                ptbColorHistory7.Visible = true;
 
-                ptbColorHistory8.Visible = true;
                 ptbColorHistory8.BackColor = colors[colors.Count-8];
+                ptbColorHistory8.Visible = true;
 
-                ptbColorHistory9.Visible = true;
                 ptbColorHistory9.BackColor = colors[colors.Count-9];
+                ptbColorHistory9.Visible = true;
             }
             catch (Exception)
             {
