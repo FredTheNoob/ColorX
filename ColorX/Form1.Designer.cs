@@ -393,7 +393,7 @@
             // RectPtbCrosshair
             // 
             this.RectPtbCrosshair.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RectPtbCrosshair.Location = new System.Drawing.Point(154, 316);
+            this.RectPtbCrosshair.Location = new System.Drawing.Point(154, 318);
             this.RectPtbCrosshair.Name = "RectPtbCrosshair";
             this.RectPtbCrosshair.Size = new System.Drawing.Size(5, 5);
             this.RectPtbCrosshair.TabIndex = 47;
@@ -414,10 +414,10 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Silver;
-            this.lblStatus.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(12, 351);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(136, 15);
+            this.lblStatus.Size = new System.Drawing.Size(144, 16);
             this.lblStatus.TabIndex = 49;
             this.lblStatus.Text = "Welcome to ColorX!";
             // 
@@ -440,12 +440,13 @@
             this.btnZoomIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZoomIn.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZoomIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnZoomIn.Location = new System.Drawing.Point(84, 294);
+            this.btnZoomIn.Location = new System.Drawing.Point(74, 294);
             this.btnZoomIn.Name = "btnZoomIn";
-            this.btnZoomIn.Size = new System.Drawing.Size(16, 26);
+            this.btnZoomIn.Size = new System.Drawing.Size(26, 26);
             this.btnZoomIn.TabIndex = 52;
             this.btnZoomIn.Text = "+";
             this.btnZoomIn.UseVisualStyleBackColor = false;
+            this.btnZoomIn.Click += new System.EventHandler(this.BtnZoomIn_Click);
             this.btnZoomIn.MouseEnter += new System.EventHandler(this.BtnZoomIn_MouseEnter);
             this.btnZoomIn.MouseLeave += new System.EventHandler(this.BtnZoomIn_MouseLeave);
             // 
@@ -457,12 +458,13 @@
             this.btnZoomOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZoomOut.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZoomOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnZoomOut.Location = new System.Drawing.Point(84, 319);
+            this.btnZoomOut.Location = new System.Drawing.Point(74, 319);
             this.btnZoomOut.Name = "btnZoomOut";
-            this.btnZoomOut.Size = new System.Drawing.Size(16, 25);
+            this.btnZoomOut.Size = new System.Drawing.Size(26, 25);
             this.btnZoomOut.TabIndex = 53;
             this.btnZoomOut.Text = "-";
             this.btnZoomOut.UseVisualStyleBackColor = false;
+            this.btnZoomOut.Click += new System.EventHandler(this.BtnZoomOut_Click);
             this.btnZoomOut.MouseEnter += new System.EventHandler(this.BtnZoomOut_MouseEnter);
             this.btnZoomOut.MouseLeave += new System.EventHandler(this.BtnZoomOut_MouseLeave);
             // 

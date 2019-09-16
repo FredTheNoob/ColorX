@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -15,7 +16,9 @@ namespace ColorX
     public partial class Form1 : Form
     {
         Color currColor;
-        List<Color> colors = new List<Color>(); 
+        List<Color> colors = new List<Color>();
+
+        Bitmap preview = new Bitmap(100, 50);
 
         #region customUI
 
@@ -158,8 +161,9 @@ namespace ColorX
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            Bitmap preview = new Bitmap(100, 50);
             Bitmap bmp = new Bitmap(1, 1);
+
+
             int curX = Cursor.Position.X;
             int curY = Cursor.Position.Y;
 
@@ -171,7 +175,6 @@ namespace ColorX
             {
                 g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
                 g.CopyFromScreen(new Point(curX - 50, curY - 25), new Point(0, 0), new Size(100, 50));
-                //g.DrawRectangle(Pens.Black, 47.5f, 23.5f, 5, 5);
             }
             Color pixel = bmp.GetPixel(0, 0);
             RectPtbCrosshair.BackColor = pixel;
@@ -259,6 +262,40 @@ namespace ColorX
             this.Cursor = Cursors.Default;
         }
 
+        private void BtnZoomIn_Click(object sender, EventArgs e)
+        {
+            Bitmap tmpImage1 = new Bitmap(preview.Width, preview.Height);
+            Graphics g = Graphics.FromImage(tmpImage1);
+            int left = preview.Width / 4;
+            int top = preview.Height / 4;
+            int width = preview.Width / 2;
+            int height = preview.Height / 2;
+            Rectangle srcRect = new Rectangle(left, top, width, height);
+            Rectangle dstRect = new Rectangle(0, 0, tmpImage1.Width, tmpImage1.Height);
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            g.DrawImage(preview, dstRect, srcRect, GraphicsUnit.Pixel);
 
+            ptbPreview.Image = tmpImage1;
+
+            lblStatus.Text = "Zoomed in";
+        }
+
+        private void BtnZoomOut_Click(object sender, EventArgs e)
+        {
+            Bitmap tmpImage1 = new Bitmap(preview.Width, preview.Height);
+            Graphics g = Graphics.FromImage(tmpImage1);
+            int left = preview.Width / 70;
+            int top = preview.Height / 70;
+            int width = preview.Width / 1;
+            int height = preview.Height / 1;
+            Rectangle srcRect = new Rectangle(left, top, width, height);
+            Rectangle dstRect = new Rectangle(0, 0, tmpImage1.Width, tmpImage1.Height);
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            g.DrawImage(preview, dstRect, srcRect, GraphicsUnit.Pixel);
+
+            ptbPreview.Image = tmpImage1;
+
+            lblStatus.Text = "Zoomed Out";
+        }
     }
 }
