@@ -123,6 +123,7 @@ namespace ColorX
 
             RectPtbCrosshair.BackColor = Color.FromArgb(0, 255, 255, 255);
             RectPtbCrosshair.Visible = true;
+            RectPtbCrosshair.BackColor = Color.FromArgb(143, 143, 143);
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -143,7 +144,8 @@ namespace ColorX
                 //g.DrawRectangle(Pens.Black, 47.5f, 23.5f, 5, 5);
             }
             Color pixel = bmp.GetPixel(0, 0);
-            
+            RectPtbCrosshair.BackColor = pixel;
+
             txtRValue.Text = bmp.GetPixel(0, 0).R.ToString();
             txtGValue.Text = bmp.GetPixel(0, 0).G.ToString();
             txtBValue.Text = bmp.GetPixel(0, 0).B.ToString();
@@ -152,7 +154,7 @@ namespace ColorX
             currColor = pixel;
             ptbColor.BackColor = pixel;
             ptbPreview.Image = preview;
-            RectPtbCrosshair.BackColor = pixel;
+            
             this.Invalidate();
         }
 
