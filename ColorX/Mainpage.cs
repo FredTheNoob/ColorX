@@ -17,6 +17,7 @@ namespace ColorX
         List<Color> colors = new List<Color>();
 
         Bitmap preview = new Bitmap(100, 50);
+        bool previewClicked = false;
 
         public Mainpage()
         {
@@ -102,82 +103,12 @@ namespace ColorX
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            Bitmap bmp = new Bitmap(1, 1);
-
-            int curX = Cursor.Position.X;
-            int curY = Cursor.Position.Y;
-
-            using (Graphics g = Graphics.FromImage(bmp))
-            {
-                g.CopyFromScreen(Cursor.Position, new Point(0, 0), new Size(1, 1));
-            }
-            using (Graphics g = Graphics.FromImage(preview))
-            {
-                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-                g.CopyFromScreen(new Point(curX - 50, curY - 25), new Point(0, 0), new Size(100, 50));
-            }
-            Color pixel = bmp.GetPixel(0, 0);
-            RectPtbCrosshair.BackColor = pixel;
-
-            txtRValue.Text = bmp.GetPixel(0, 0).R.ToString();
-            txtGValue.Text = bmp.GetPixel(0, 0).G.ToString();
-            txtBValue.Text = bmp.GetPixel(0, 0).B.ToString();
-            txtHexValue.Text = "#" + bmp.GetPixel(0, 0).R.ToString("X2") + bmp.GetPixel(0, 0).G.ToString("X2") + bmp.GetPixel(0, 0).B.ToString("X2");
-
-            currColor = pixel;
-            ptbColor.BackColor = pixel;
-            ptbPreview.Image = preview;
-            lblStatus.Text = "Color found!";
-
-            this.Invalidate();
+            FindColorAndPreview();
         }
 
         private void BtnFindColor_MouseUp(object sender, MouseEventArgs e)
         {
-            timer1.Stop();
-
-            this.Cursor = Cursors.Default;
-
-            colors.Add(currColor);
-
-            try
-            {
-
-                ptbColorHistory.BackColor = colors[colors.Count - 1];
-                ptbColorHistory.Visible = true;
-
-                ptbColorHistory2.BackColor = colors[colors.Count - 2];
-                ptbColorHistory2.Visible = true;
-
-                ptbColorHistory3.BackColor = colors[colors.Count - 3];
-                ptbColorHistory3.Visible = true;
-
-                ptbColorHistory4.BackColor = colors[colors.Count - 4];
-                ptbColorHistory4.Visible = true;
-
-                ptbColorHistory5.BackColor = colors[colors.Count - 5];
-                ptbColorHistory5.Visible = true;
-
-                ptbColorHistory6.BackColor = colors[colors.Count - 6];
-                ptbColorHistory6.Visible = true;
-
-                ptbColorHistory7.BackColor = colors[colors.Count - 7];
-                ptbColorHistory7.Visible = true;
-
-                ptbColorHistory8.BackColor = colors[colors.Count - 8];
-                ptbColorHistory8.Visible = true;
-
-                ptbColorHistory9.BackColor = colors[colors.Count - 9];
-                ptbColorHistory9.Visible = true;
-            }
-            catch (Exception)
-            {
-            }
-
-            RectPtbCrosshair.Visible = false;
-
-            btnZoomIn.Visible = true;
-            btnZoomOut.Visible = true;
+            ColorHistory();
         }
 
         private void LoadColor_Click(object sender, EventArgs e)
@@ -236,6 +167,103 @@ namespace ColorX
             ptbPreview.Image = tmpImage1;
 
             lblStatus.Text = "Zoomed Out";
+        }
+
+        private void PtbPreview_Click(object sender, EventArgs e)
+        {
+            previewClicked = true;
+            FindColorAndPreview();
+        }
+
+        // METHODS
+
+        private void FindColorAndPreview()
+        {
+            Bitmap bmp = new Bitmap(1, 1);
+
+            int curX = Cursor.Position.X;
+            int curY = Cursor.Position.Y;
+
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.CopyFromScreen(Cursor.Position, new Point(0, 0), new Size(1, 1));
+            }
+            using (Graphics g = Graphics.FromImage(preview))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+
+                if (previewClicked)
+                {
+                    Color previewPixel = bmp.GetPixel(0, 0);
+                    previewClicked = false;
+                }
+                else
+                {
+                    g.CopyFromScreen(new Point(curX - 50, curY - 25), new Point(0, 0), new Size(100, 50));
+                }
+            }
+            Color pixel = bmp.GetPixel(0, 0);
+            RectPtbCrosshair.BackColor = pixel;
+
+            txtRValue.Text = bmp.GetPixel(0, 0).R.ToString();
+            txtGValue.Text = bmp.GetPixel(0, 0).G.ToString();
+            txtBValue.Text = bmp.GetPixel(0, 0).B.ToString();
+            txtHexValue.Text = "#" + bmp.GetPixel(0, 0).R.ToString("X2") + bmp.GetPixel(0, 0).G.ToString("X2") + bmp.GetPixel(0, 0).B.ToString("X2");
+
+            currColor = pixel;
+            ptbColor.BackColor = pixel;
+            ptbPreview.Image = preview;
+            lblStatus.Text = "Color found!";
+
+            this.Invalidate();
+        }
+
+        private void ColorHistory()
+        {
+            timer1.Stop();
+
+            this.Cursor = Cursors.Default;
+
+            colors.Add(currColor);
+
+            try
+            {
+
+                ptbColorHistory.BackColor = colors[colors.Count - 1];
+                ptbColorHistory.Visible = true;
+
+                ptbColorHistory2.BackColor = colors[colors.Count - 2];
+                ptbColorHistory2.Visible = true;
+
+                ptbColorHistory3.BackColor = colors[colors.Count - 3];
+                ptbColorHistory3.Visible = true;
+
+                ptbColorHistory4.BackColor = colors[colors.Count - 4];
+                ptbColorHistory4.Visible = true;
+
+                ptbColorHistory5.BackColor = colors[colors.Count - 5];
+                ptbColorHistory5.Visible = true;
+
+                ptbColorHistory6.BackColor = colors[colors.Count - 6];
+                ptbColorHistory6.Visible = true;
+
+                ptbColorHistory7.BackColor = colors[colors.Count - 7];
+                ptbColorHistory7.Visible = true;
+
+                ptbColorHistory8.BackColor = colors[colors.Count - 8];
+                ptbColorHistory8.Visible = true;
+
+                ptbColorHistory9.BackColor = colors[colors.Count - 9];
+                ptbColorHistory9.Visible = true;
+            }
+            catch (Exception)
+            {
+            }
+
+            RectPtbCrosshair.Visible = false;
+
+            btnZoomIn.Visible = true;
+            btnZoomOut.Visible = true;
         }
     }
 }

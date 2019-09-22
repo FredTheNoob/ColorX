@@ -81,9 +81,9 @@
             this.btnZoomOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZoomOut.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZoomOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnZoomOut.Location = new System.Drawing.Point(84, 297);
+            this.btnZoomOut.Location = new System.Drawing.Point(76, 297);
             this.btnZoomOut.Name = "btnZoomOut";
-            this.btnZoomOut.Size = new System.Drawing.Size(16, 25);
+            this.btnZoomOut.Size = new System.Drawing.Size(24, 25);
             this.btnZoomOut.TabIndex = 80;
             this.btnZoomOut.Text = "-";
             this.btnZoomOut.UseVisualStyleBackColor = false;
@@ -99,9 +99,9 @@
             this.btnZoomIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZoomIn.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZoomIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnZoomIn.Location = new System.Drawing.Point(84, 272);
+            this.btnZoomIn.Location = new System.Drawing.Point(76, 272);
             this.btnZoomIn.Name = "btnZoomIn";
-            this.btnZoomIn.Size = new System.Drawing.Size(16, 26);
+            this.btnZoomIn.Size = new System.Drawing.Size(24, 26);
             this.btnZoomIn.TabIndex = 79;
             this.btnZoomIn.Text = "+";
             this.btnZoomIn.UseVisualStyleBackColor = false;
@@ -267,6 +267,7 @@
             this.ptbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbPreview.TabIndex = 65;
             this.ptbPreview.TabStop = false;
+            this.ptbPreview.Click += new System.EventHandler(this.PtbPreview_Click);
             // 
             // txtHexValue
             // 
