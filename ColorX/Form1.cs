@@ -85,7 +85,7 @@ namespace ColorX
         //}
         private void Form1_Load(object sender, EventArgs e)
         {
-            mainpage1.Show();
+            mainpage.Show();
             
         }
 
