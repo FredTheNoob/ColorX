@@ -36,7 +36,6 @@
             this.borderRight = new System.Windows.Forms.PictureBox();
             this.borderLeft = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.mainpage = new ColorX.Mainpage();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderRight)).BeginInit();
@@ -126,19 +125,11 @@
             // 
             this.timer1.Enabled = true;
             // 
-            // mainpage
-            // 
-            this.mainpage.Location = new System.Drawing.Point(5, 22);
-            this.mainpage.Name = "mainpage";
-            this.mainpage.Size = new System.Drawing.Size(302, 346);
-            this.mainpage.TabIndex = 24;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 373);
-            this.Controls.Add(this.mainpage);
             this.Controls.Add(this.borderBottom);
             this.Controls.Add(this.borderRight);
             this.Controls.Add(this.borderLeft);
@@ -169,7 +160,6 @@
         private System.Windows.Forms.PictureBox borderLeft;
         private System.Windows.Forms.Timer timer1;
         private Mainpage mainpage1;
-        private Mainpage mainpage;
     }
 }
 
