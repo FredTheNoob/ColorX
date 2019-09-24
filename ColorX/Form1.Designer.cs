@@ -135,13 +135,13 @@
             this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSettings.FlatAppearance.BorderSize = 2;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSettings.Location = new System.Drawing.Point(10, 26);
+            this.btnSettings.Location = new System.Drawing.Point(22, 22);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(79, 37);
+            this.btnSettings.Size = new System.Drawing.Size(51, 46);
             this.btnSettings.TabIndex = 64;
-            this.btnSettings.Text = "Settings";
+            this.btnSettings.Text = "⚙";
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
@@ -151,13 +151,13 @@
             this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBack.FlatAppearance.BorderSize = 2;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBack.Location = new System.Drawing.Point(10, 26);
+            this.btnBack.Location = new System.Drawing.Point(33, 22);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(79, 37);
+            this.btnBack.Size = new System.Drawing.Size(30, 46);
             this.btnBack.TabIndex = 65;
-            this.btnBack.Text = "<=";
+            this.btnBack.Text = "⮜";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Visible = false;
             this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
