@@ -36,6 +36,10 @@
             this.borderRight = new System.Windows.Forms.PictureBox();
             this.borderLeft = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.mainpage1 = new ColorX.Mainpage();
+            this.settings1 = new ColorX.Settings();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borderRight)).BeginInit();
@@ -125,17 +129,68 @@
             // 
             this.timer1.Enabled = true;
             // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Silver;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSettings.FlatAppearance.BorderSize = 2;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSettings.Location = new System.Drawing.Point(10, 26);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(79, 37);
+            this.btnSettings.TabIndex = 64;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Silver;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBack.FlatAppearance.BorderSize = 2;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBack.Location = new System.Drawing.Point(10, 26);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(79, 37);
+            this.btnBack.TabIndex = 65;
+            this.btnBack.Text = "<=";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Visible = false;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // mainpage1
+            // 
+            this.mainpage1.Location = new System.Drawing.Point(5, 22);
+            this.mainpage1.Name = "mainpage1";
+            this.mainpage1.Size = new System.Drawing.Size(302, 346);
+            this.mainpage1.TabIndex = 24;
+            // 
+            // settings1
+            // 
+            this.settings1.Location = new System.Drawing.Point(5, 21);
+            this.settings1.Name = "settings1";
+            this.settings1.Size = new System.Drawing.Size(302, 346);
+            this.settings1.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 373);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnSettings);
+            this.Controls.Add(this.mainpage1);
             this.Controls.Add(this.borderBottom);
             this.Controls.Add(this.borderRight);
             this.Controls.Add(this.borderLeft);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.settings1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -160,6 +215,9 @@
         private System.Windows.Forms.PictureBox borderLeft;
         private System.Windows.Forms.Timer timer1;
         private Mainpage mainpage1;
+        private Settings settings1;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnBack;
     }
 }
 

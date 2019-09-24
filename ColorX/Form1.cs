@@ -85,10 +85,26 @@ namespace ColorX
         //}
         private void Form1_Load(object sender, EventArgs e)
         {
+            settings1.Hide();
             mainpage1.Show();
-            
         }
 
-        
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            mainpage1.Hide();
+            settings1.BringToFront();
+            settings1.Show();
+            btnBack.BringToFront();
+            btnBack.Visible = true;
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            btnBack.Visible = false;
+            btnBack.SendToBack();
+            btnSettings.BringToFront();
+            settings1.Hide();
+            mainpage1.Show();
+        }
     }
 }

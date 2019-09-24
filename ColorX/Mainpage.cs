@@ -173,6 +173,7 @@ namespace ColorX
         {
             previewClicked = true;
             FindColorAndPreview();
+            ColorHistory();
         }
 
         // METHODS
